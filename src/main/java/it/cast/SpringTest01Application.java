@@ -1,8 +1,10 @@
 package it.cast;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@MapperScan(value = "it.cast.mapper")
 @SpringBootApplication
 public class SpringTest01Application {
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mybatis 中 mapper接口里面的方法 id对应的方法-->
+<mapper namespace="it.cast.mapper.EmployeeMapper">
+<!--
+    public Employee getEmpById(Integer id);
+    public  void insertEmp(Employee employee);
+-->
+    <select id="getEmpById" resultType="it.cast.bean.Employee">
+        select * from employee where id = #{id}
+    </select>
+
+    <insert id="insertEmp"><![CDATA[
+        INSERT INTO employee (lastName,email,gender,d_id) values (#{lastName},#{email},#{gender},#{dId})
+    ]]></insert>
+
+    <select id="getEmpList" resultType="it.cast.bean.Employee">
+        SELECT * FROM employee
+    </select>
+</mapper>
