@@ -1,0 +1,14 @@
+
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/springboot?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: gkm-2019
+    type: com.alibaba.druid.pool.DruidDataSourceC3P0Adapter
+
+    initialSize: 5
+    minIdle: 5
+#    schema:
+#      - classpath:springboot.sql
+
