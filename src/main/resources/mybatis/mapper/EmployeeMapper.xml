@@ -19,4 +19,8 @@
     <select id="getEmpList" resultType="it.cast.bean.Employee">
         SELECT * FROM employee
     </select>
+
+    <select id="getAllEmployee" resultType="it.cast.bean.Employee">
+        SELECT * FROM employee
+    </select>
 </mapper>

@@ -20,4 +20,6 @@ public interface DepartmentMapper {
 
     @Update("update department set departmentName=#{department_name} where id=#{id}")
     public int updateDept(Department department);
+
+
 }
