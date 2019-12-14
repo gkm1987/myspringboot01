@@ -17,7 +17,7 @@ spring:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
-<<<<<<< HEAD
+
 
 # 试下热部署
 devtools:
@@ -27,11 +27,9 @@ devtools:
   restart:
     enabled: true #是否支持热部署
 
-
-=======
 pagehelper:
   helper-dialect: mysql
   reasonable: true
   support-methods-arguments: true
   params: cout=countSql
->>>>>>> 27b7cfff801b9a5b80d1276a3da0cb0f0bce7548
+
