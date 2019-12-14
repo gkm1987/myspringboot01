@@ -1,5 +1,7 @@
 package it.cast.controller;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import it.cast.bean.Department;
 import it.cast.bean.Employee;
 import it.cast.mapper.DepartmentMapper;
@@ -38,5 +40,11 @@ public class DeptController {
     @GetMapping("/emp")
     public List<Employee> getEmpList(){
         return employeeMapper.getEmpList();
+    }
+
+    @GetMapping("/empList")
+    public Page<Employee> empList(Integer pageNum, Integer pageSize){
+        PageHelper.startPage(1,1);
+        return employeeMapper.getAllEmployee();
     }
 }
