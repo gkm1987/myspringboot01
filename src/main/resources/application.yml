@@ -12,11 +12,15 @@ spring:
   data:
     rest:
       base-path: /api
+#      配置redis 本次作为缓存
+  redis:
+    host: 127.0.0.1
 #    schema:
 #      - classpath:springboot.sql
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
+
 
 
 # 试下热部署

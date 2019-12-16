@@ -6,11 +6,15 @@ import com.power.doc.builder.ApiDocBuilder;
 import com.power.doc.builder.HtmlApiDocBuilder;
 import com.power.doc.constants.DocGlobalConstants;
 import com.power.doc.model.*;
+import it.cast.bean.Employee;
 import it.cast.bean.Person;
+import it.cast.mapper.EmployeeMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.sql.DataSource;
@@ -35,6 +39,16 @@ class SpringTest01ApplicationTests {
     @Autowired
     Person person;
 
+    @Autowired
+    EmployeeMapper employeeMapper;
+
+
+//    测试数据局操作EmployeeMapper接口
+    @Test
+    public void testEmployeeMapper(){
+        Employee empById = employeeMapper.getEmpById(1);
+        System.out.println(empById);
+    }
 
     @Test
     void testates() throws SQLException {

@@ -5,3 +5,6 @@
 20191214
 
 > 在springboot中使用 security 认证和授权
+
+20191216
+> 在springboot中使用 redis 作为缓存
