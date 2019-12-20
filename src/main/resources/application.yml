@@ -15,12 +15,14 @@ spring:
 #      配置redis 本次作为缓存
   redis:
     host: 127.0.0.1
+    database: 2
+    port: 6379
+
 #    schema:
 #      - classpath:springboot.sql
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
-
 
 
 # 试下热部署
@@ -36,4 +38,10 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: cout=countSql
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8080
+
+#jwt配置
 

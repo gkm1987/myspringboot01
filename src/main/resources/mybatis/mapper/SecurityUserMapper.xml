@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mybatis 中 mapper接口里面的方法 id对应的方法-->
+<mapper namespace="it.cast.mapper.SecurityUserMapper">
+<!--
+    public Employee getEmpById(Integer id);
+    public  void insertEmp(Employee employee);
+-->
+    <select id="findPermissionsByUserId" resultType="it.cast.bean.PermissionDto">
+        SELECT * FROM t_permission WHERE id in(
+            SELECT permission_id FROM t_role_permission WHERE role_id in (
+            SELECT role_id FROM t_user_role WHERE user_id = #{userId})
+        )
+    </select>
+
+</mapper>

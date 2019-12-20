@@ -1,5 +1,10 @@
 package it.cast.bean;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+
+import javax.validation.constraints.Min;
+
 public class User {
     private String username;
     private String password;
@@ -27,4 +32,7 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
+
+
+
 }

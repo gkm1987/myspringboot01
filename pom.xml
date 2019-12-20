@@ -36,6 +36,29 @@
             <artifactId>java-jwt</artifactId>
             <version>3.4.0</version>
         </dependency>
+<!--        日志-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-log4j2</artifactId>-->
+<!--        </dependency>-->
+
+<!--        面向切面变成-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mobile</artifactId>
+            <version>1.5.13.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>findbugs</artifactId>
+            <version>3.0.1</version>
+        </dependency>
 
         <!-- 热部署  -->
         <dependency>
@@ -45,19 +68,19 @@
             <optional>true</optional>
         </dependency>
 
-<!--        数据库连接相关引入-->
+<!--    数据库连接相关引入-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-<!--mysql 数据驱动-->
+<!--    mysql 数据驱动-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-<!--        引入自定义数据源 阿里-->
+<!--    引入自定义数据源 阿里-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
@@ -70,10 +93,10 @@
             <version>2.1.1</version>
         </dependency>
 
-<!--        引入redis 作为缓存 功能-->
+<!--    引入redis 作为缓存 功能-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 <!--    引入fastjson 处理json数据-->
         <dependency>
@@ -82,27 +105,27 @@
             <version>1.2.61</version>
         </dependency>
 
-<!--使用smart-doc 未成功-->
+<!--    使用smart-doc 未成功-->
         <dependency>
             <groupId>com.github.shalousun</groupId>
             <artifactId>smart-doc</artifactId>
             <version>1.7.8</version>
             <scope>test</scope>
         </dependency>
-<!--        使用分页-->
+<!--    使用分页-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.10</version>
         </dependency>
-<!--        前端资源文件引入-->
+<!--     前端资源文件引入-->
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>3.3.1</version>
         </dependency>
 
-<!--        配置引入-->
+<!--    配置引入-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
