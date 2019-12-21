@@ -1,5 +1,6 @@
 package it.cast.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Leave1Controller {
 
     @RequestMapping("/my")
+    @PreAuthorize("hasAnyAuthority('VIP1')")
+//    @PreAuthorize("hasAnyAuthority('VIP1','VIP2')")
     public String my(){
         return getUsername()+ "登录成功";
     }
