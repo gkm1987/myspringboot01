@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Leave1Controller {
 
     @RequestMapping("/my")
-    @PreAuthorize("hasAnyAuthority('VIP1')")
+    @PreAuthorize("hasAnyAuthority('VIP3')")
 //    @PreAuthorize("hasAnyAuthority('VIP1','VIP2')")
     public String my(){
         return getUsername()+ "登录成功";

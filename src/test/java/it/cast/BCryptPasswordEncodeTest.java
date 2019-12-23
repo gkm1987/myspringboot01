@@ -16,7 +16,7 @@ public class BCryptPasswordEncodeTest {
     @Test
     public void testBCrypt(){
         //对密码加密
-        String hashpw = BCrypt.hashpw("123", BCrypt.gensalt());
+        String hashpw = BCrypt.hashpw("secret", BCrypt.gensalt());
         System.out.println(hashpw);
 
         //校验密码
